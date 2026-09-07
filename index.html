@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Student Council | Voice Your Concerns</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Meta tags for SEO & Social Previews -->
+    <meta name="description" content="Official anonymous student concern form for Brokenshire College of Toril Student Council - Partylist Padayon. Voice your concerns safely and anonymously.">
+    <meta name="keywords" content="Brokenshire College of Toril, BCT, BCT Toril, BCT Student Council, Partylist Padayon, BCT Concerns">
+    <meta name="author" content="BCT Student Council">
+
+    <meta property="og:title" content="Brokenshire College of Toril | Student Council Voice Portal">
+    <meta property="og:description" content="Submit your school concerns 100% anonymously to Partylist Padayon.">
+    <meta property="og:type" content="website">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header id="header">
+        <div class="nav-container">
+            <a href="#home" class="logo-section">
+                <div class="logo-icon">🏛️</div>
+                <div class="logo-text">
+                    <h1>Student Council</h1>
+                    <span>Voice Your Concerns</span>
+                </div>
+            </a>
+            
+            <button class="hamburger" id="hamburgerBtn" aria-label="Toggle navigation menu" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#about" class="nav-item">About</a>
+                <a href="#how-it-works" class="nav-item">How It Works</a>
+                <a href="#submit" class="nav-item">Submit Concern</a>
+                <a href="officers.html" target="_blank" rel="noopener noreferrer" class="nav-item">Council Officers</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO / LANDING SECTION -->
+        <section class="hero" id="home">
+            <div class="floating-shapes" aria-hidden="true">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+
+            <div class="hero-content">
+                <div class="hero-badge">100% Safe • Anonymous • Confidential</div>
+                <h2>Your Voice, <br><span class="highlight">Our Priority</span></h2>
+                <p>Every student deserves an open, secure channel to share ideas and issues. Submit your concerns anonymously, and our officers will take action.</p>
+                
+                <div class="hero-buttons">
+                    <a href="#submit" class="btn-primary">📝 Submit a Concern</a>
+                    <a href="officers.html" target="_blank" rel="noopener noreferrer" class="btn-secondary">Meet the Officers</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="section about-section" id="about">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">About This Page</span>
+                    <h2>Why We Created This Platform</h2>
+                    <p>This initiative bridges the gap between students and the student council officers. Here is how we ensure your voice creates real change.</p>
+                </div>
+
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>100% Anonymous</h3>
+                        <p>No login, no names and no IP logs. Your identity is shielded.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">👀</div>
+                        <h3>Officers-Only Access</h3>
+                        <p>Only verified student council officers with authorized credentials can view submitted concerns.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">⚡</div>
+                        <h3>Fast & Effortless</h3>
+                        <p>Simply pick a category, write your thoughts, select an urgency level, and send.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">🤝</div>
+                        <h3>Action-Driven</h3>
+                        <p>Concerns are reviewed in official council meetings to find viable, concrete solutions.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Prioritized Issues</h3>
+                        <p>Urgent safety and academic concerns are highlighted so immediate action can be taken.</p>
+                    </div>
+
+                    <div class="feature-card">
+                        <div class="feature-icon">💡</div>
+                        <h3>Open for Suggestions</h3>
+                        <p>Not just complaints—send us your ideas for events, club activities, and campus improvements.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="section how-it-works" id="how-it-works">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag">Simple Process</span>
+                    <h2>How It Works</h2>
+                    <p>Four easy steps from your screen straight to the council agenda.</p>
+                </div>
+
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-badge">1</div>
+                        <div class="step-content">
+                            <h3>Choose a Category</h3>
+                            <p>Pick from academics, facilities, safety, cafeteria, and more to direct your issue to the right committee.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-badge">2</div>
+                        <div class="step-content">
+                            <h3>Write Your Concern</h3>
+                            <p>Provide clear details about the situation so our officers can investigate and understand the issue accurately.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-badge">3</div>
+                        <div class="step-content">
+                            <h3>Set Priority Level</h3>
+                            <p>Mark it as Low, Medium, or High priority so urgent matters are escalated immediately.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-badge">4</div>
+                        <div class="step-content">
+                            <h3>Instant Anonymous Dispatch</h3>
+                            <p>Submit with confidence. Your issue is delivered straight to our encrypted officer dashboard.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONCERN FORM SECTION -->
+        <section class="section form-section" id="submit">
+            <div class="section-container">
+                <div class="form-layout">
+                    
+                    <div class="form-info">
+                        <span class="section-tag">Submit</span>
+                        <h2>Voice Your Concern</h2>
+                        <p>Use the form on the right to post your anonymous report or idea. Your feedback is confidential and directly reviewed by your student representatives.</p>
+
+                        <div class="privacy-card">
+                            <h4>🛡️ Privacy Guarantee</h4>
+                            <ul>
+                                <li>No identity or email required</li>
+                                <li>No IP address or browser fingerprinting</li>
+                                <li>Only student council officers can read messages</li>
+                                <li>Secure anonymous submission</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                            <div class="form-wrapper">
+                                <form class="concern-form" id="concernForm"
+                                    action="https://docs.google.com/forms/d/e/1FAIpQLSfiI488OKEk8s4dcXwMf57_jfFyxImqza_k_ptPrbF-Qa3zZg/formResponse"
+                                    method="POST"
+                                    target="hidden_iframe"
+                                    onsubmit="handleFormSubmit()">
+
+                                    <!-- 1. Email -->
+                                    <div class="form-group">
+                                        <label for="concernEmail">Email Address <span class="required">*</span></label>
+                                        <input type="email" id="concernEmail" name="entry.2028767083" placeholder="e.g. student@brokenshire.edu.ph" required>
+                                        <small style="color: var(--text-muted); font-size: 0.78rem; display: block; margin-top: 4px;">
+                                            📩 Officers will reply to this email with updates on your concern.
+                                        </small>
+                                    </div>
+
+                                    <!-- 2. Category -->
+                                    <div class="form-group">
+                                        <label for="concernCategory">Category <span class="required">*</span></label>
+                                        <select id="concernCategory" name="entry.187384549" required>
+                                            <option value="" disabled selected>Select a category...</option>
+                                            <option value="Academics">📚 Academics & Curriculum</option>
+                                            <option value="Facilities">🏫 Campus Facilities & Restrooms</option>
+                                            <option value="Safety">🛡️ Safety & Security</option>
+                                            <option value="Bullying">🚫 Bullying / Peer Issues</option>
+                                            <option value="Events">🎉 School Events & Activities</option>
+                                            <option value="Cafeteria">🍽️ Cafeteria & Food Services</option>
+                                            <option value="Transportation">🚌 School Bus & Transport</option>
+                                            <option value="Mental Health">🧠 Wellness & Mental Health</option>
+                                            <option value="Other">💡 Other Feedback / Suggestions</option>
+                                        </select>
+                                    </div>
+
+                                    <!-- 3. Subject -->
+                                    <div class="form-group">
+                                        <label for="concernSubject">Subject / Brief Title <span class="optional">(optional)</span></label>
+                                        <input type="text" id="concernSubject" name="entry.1086539697" placeholder="e.g. Broken AC in Room 304" maxlength="100">
+                                    </div>
+
+                                    <!-- 4. Concern Details -->
+                                    <div class="form-group">
+                                        <label for="concernDescription">Concern Details <span class="required">*</span></label>
+                                        <textarea id="concernDescription" name="entry.946294162" placeholder="Please describe what happened, when, and where..." maxlength="2000" oninput="updateCharCount()" required minlength="10"></textarea>
+                                        <div class="char-count"><span id="charCount">0</span> / 2000</div>
+                                    </div>
+
+                                    <!-- 5. Urgency -->
+                                    <div class="form-group">
+                                        <label>Urgency Level <span class="required">*</span></label>
+                                        <div class="urgency-grid">
+                                            <label class="urgency-btn">
+                                                <input type="radio" name="entry.1825847816" value="Low" checked>
+                                                <span class="btn-label low">🟢 Low</span>
+                                            </label>
+                                            <label class="urgency-btn">
+                                                <input type="radio" name="entry.1825847816" value="Medium">
+                                                <span class="btn-label med">🟡 Medium</span>
+                                            </label>
+                                            <label class="urgency-btn">
+                                                <input type="radio" name="entry.1825847816" value="High">
+                                                <span class="btn-label high">🔴 High</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <button type="submit" class="submit-btn" id="submitBtn">
+                                        <span>📨 Submit Concern</span>
+                                    </button>
+                                </form>
+
+                                <!-- Invisible iframe -->
+                                <iframe name="hidden_iframe" id="hidden_iframe" style="position:absolute;width:0;height:0;border:0;"></iframe>
+
+                                <!-- Success Card -->
+                                <div class="success-message" id="successMessage">
+                                    <div class="success-icon">✅</div>
+                                    <h3>Concern Submitted!</h3>
+                                    <p>Thank you for reaching out. Officers will reply to your email with updates.</p>
+                                    <button type="button" class="submit-another-btn" onclick="resetForm()">Submit Another Concern</button>
+                                </div>
+                            </div>
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span>📨 Submit Concern</span>
+                            </button>
+                        </form>
+
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="position:absolute;width:0;height:0;border:0;"></iframe>
+
+                        <!-- Success Message Card -->
+                        <div class="success-message" id="successMessage">
+                            <div class="success-icon">✅</div>
+                            <h3>Concern Submitted!</h3>
+                            <p>Thank you for reaching out. Your submission has been posted anonymously to the council forum.</p>
+                            <button type="button" class="submit-another-btn" onclick="resetForm()">Submit Another Concern</button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> 
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2026 <strong>Student Council</strong>. Built by students, for students.</p>
+            <p class="footer-sub">All concerns submitted through this page remain strictly anonymous.</p>
+        </div>
+    </footer>
+
+    <!-- POPUP TOAST -->
+    <div class="toast" id="toast"></div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
