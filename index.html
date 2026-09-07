@@ -8,12 +8,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <!-- ADD THESE META TAGS INSIDE <head> IN index.html -->
+    
+    <!-- Meta tags for SEO & Social Previews -->
     <meta name="description" content="Official anonymous student concern form for Brokenshire College of Toril Student Council - Partylist Padayon. Voice your concerns safely and anonymously.">
     <meta name="keywords" content="Brokenshire College of Toril, BCT, BCT Toril, BCT Student Council, Partylist Padayon, BCT Concerns">
     <meta name="author" content="BCT Student Council">
 
-    <!-- Open Graph tags (makes the link look pretty with a preview picture when shared on Messenger/Facebook) -->
     <meta property="og:title" content="Brokenshire College of Toril | Student Council Voice Portal">
     <meta property="og:description" content="Submit your school concerns 100% anonymously to Partylist Padayon.">
     <meta property="og:type" content="website">
@@ -47,8 +47,7 @@
     </header>
 
     <main>
-
-<!-- HERO / LANDING SECTION -->
+        <!-- HERO / LANDING SECTION -->
         <section class="hero" id="home">
             <div class="floating-shapes" aria-hidden="true">
                 <div class="shape shape-1"></div>
@@ -68,7 +67,7 @@
             </div>
         </section>
 
-<!-- ABOUT SECTION -->
+        <!-- ABOUT SECTION -->
         <section class="section about-section" id="about">
             <div class="section-container">
                 <div class="section-header">
@@ -116,7 +115,8 @@
                 </div>
             </div>
         </section>
-<!-- HOW IT WORKS -->
+
+        <!-- HOW IT WORKS -->
         <section class="section how-it-works" id="how-it-works">
             <div class="section-container">
                 <div class="section-header">
@@ -161,7 +161,7 @@
             </div>
         </section>
 
-<!-- CONCERN FORM SECTION -->
+        <!-- CONCERN FORM SECTION -->
         <section class="section form-section" id="submit">
             <div class="section-container">
                 <div class="form-layout">
@@ -181,79 +181,79 @@
                             </ul>
                         </div>
                     </div>
-                        <div class="form-wrapper">
-                            <form class="concern-form" id="concernForm" 
-                                action="https://docs.google.com/forms/d/e/1FAIpQLSdmycP589UjUmjeiNvBvvW6v32gy1DJaSs-YE99ZFxaeSS7Cw/formResponse" 
-                                method="POST" 
-                                target="hidden_iframe" 
-                                onsubmit="handleFormSubmit()">
 
-                                <!-- 1. Email Field -->
-                                <div class="form-group">
-                                    <label for="concernEmail">Email Address <span class="required">*</span></label>
-                                    <input type="email" id="concernEmail" name="entry.1678254563" placeholder="e.g. student@brokenshire.edu.ph" required>
-                                    <small style="color: var(--text-muted); font-size: 0.78rem; display: block; margin-top: 4px;">
-                                        📩 Our officers will use this email to reply with updates regarding your concern.
-                                    </small>
+                    <div class="form-wrapper">
+                        <form class="concern-form" id="concernForm" 
+                            action="https://docs.google.com/forms/d/e/1FAIpQLSdmycP589UjUmjeiNvBvvW6v32gy1DJaSs-YE99ZFxaeSS7Cw/formResponse" 
+                            method="POST" 
+                            target="hidden_iframe" 
+                            onsubmit="handleFormSubmit()">
+
+                            <!-- 1. Email Field -->
+                            <div class="form-group">
+                                <label for="concernEmail">Email Address <span class="required">*</span></label>
+                                <input type="email" id="concernEmail" name="entry.1678254563" placeholder="e.g. student@brokenshire.edu.ph" required>
+                                <small style="color: var(--text-muted); font-size: 0.78rem; display: block; margin-top: 4px;">
+                                    📩 Our officers will use this email to reply with updates regarding your concern.
+                                </small>
+                            </div>
+
+                            <!-- 2. Category Dropdown -->
+                            <div class="form-group">
+                                <label for="concernCategory">Category <span class="required">*</span></label>
+                                <select id="concernCategory" name="entry.747416567" required>
+                                    <option value="" disabled selected>Select a category...</option>
+                                    <option value="Academics">📚 Academics & Curriculum</option>
+                                    <option value="Facilities">🏫 Campus Facilities & Restrooms</option>
+                                    <option value="Safety">🛡️ Safety & Security</option>
+                                    <option value="Bullying">🚫 Bullying / Peer Issues</option>
+                                    <option value="Events">🎉 School Events & Activities</option>
+                                    <option value="Cafeteria">🍽️ Cafeteria & Food Services</option>
+                                    <option value="Transportation">🚌 School Bus & Transport</option>
+                                    <option value="Mental Health">🧠 Wellness & Mental Health</option>
+                                    <option value="Other">💡 Other Feedback / Suggestions</option>
+                                </select>
+                            </div>
+
+                            <!-- 3. Subject Title -->
+                            <div class="form-group">
+                                <label for="concernSubject">Subject / Brief Title <span class="optional">(optional)</span></label>
+                                <input type="text" id="concernSubject" name="entry.412094616" placeholder="e.g. Broken AC in Room 304" maxlength="100">
+                            </div>
+
+                            <!-- 4. Concern Description -->
+                            <div class="form-group">
+                                <label for="concernDescription">Concern Details <span class="required">*</span></label>
+                                <textarea id="concernDescription" name="entry.1328428692" placeholder="Please describe what happened, when, and where..." maxlength="2000" oninput="updateCharCount()" required minlength="10"></textarea>
+                                <div class="char-count"><span id="charCount">0</span> / 2000</div>
+                            </div>
+
+                            <!-- 5. Urgency Level -->
+                            <div class="form-group">
+                                <label>Urgency Level <span class="required">*</span></label>
+                                <div class="urgency-grid">
+                                    <label class="urgency-btn">
+                                        <input type="radio" name="entry.2115618963" value="Low" checked>
+                                        <span class="btn-label low">🟢 Low</span>
+                                    </label>
+                                    <label class="urgency-btn">
+                                        <input type="radio" name="entry.2115618963" value="Medium">
+                                        <span class="btn-label med">🟡 Medium</span>
+                                    </label>
+                                    <label class="urgency-btn">
+                                        <input type="radio" name="entry.2115618963" value="High">
+                                        <span class="btn-label high">🔴 High</span>
+                                    </label>
                                 </div>
+                            </div>
 
-                                <!-- 2. Category Dropdown -->
-                                <div class="form-group">
-                                    <label for="concernCategory">Category <span class="required">*</span></label>
-                                    <select id="concernCategory" name="entry.747416567" required>
-                                        <option value="" disabled selected>Select a category...</option>
-                                        <option value="Academics">📚 Academics & Curriculum</option>
-                                        <option value="Facilities">🏫 Campus Facilities & Restrooms</option>
-                                        <option value="Safety">🛡️ Safety & Security</option>
-                                        <option value="Bullying">🚫 Bullying / Peer Issues</option>
-                                        <option value="Events">🎉 School Events & Activities</option>
-                                        <option value="Cafeteria">🍽️ Cafeteria & Food Services</option>
-                                        <option value="Transportation">🚌 School Bus & Transport</option>
-                                        <option value="Mental Health">🧠 Wellness & Mental Health</option>
-                                        <option value="Other">💡 Other Feedback / Suggestions</option>
-                                    </select>
-                                </div>
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span>📨 Submit Concern</span>
+                            </button>
+                        </form>
 
-                                <!-- 3. Subject Title -->
-                                <div class="form-group">
-                                    <label for="concernSubject">Subject / Brief Title <span class="optional">(optional)</span></label>
-                                    <input type="text" id="concernSubject" name="entry.412094616" placeholder="e.g. Broken AC in Room 304" maxlength="100">
-                                </div>
+                        <iframe name="hidden_iframe" id="hidden_iframe" style="position:absolute;width:0;height:0;border:0;"></iframe>
 
-                                <!-- 4. Concern Description -->
-                                <div class="form-group">
-                                    <label for="concernDescription">Concern Details <span class="required">*</span></label>
-                                    <textarea id="concernDescription" name="entry.1328428692" placeholder="Please describe what happened, when, and where..." maxlength="2000" oninput="updateCharCount()" required minlength="10"></textarea>
-                                    <div class="char-count"><span id="charCount">0</span> / 2000</div>
-                                </div>
-
-                                <!-- 5. Urgency Level -->
-                                <div class="form-group">
-                                    <label>Urgency Level <span class="required">*</span></label>
-                                    <div class="urgency-grid">
-                                        <label class="urgency-btn">
-                                            <input type="radio" name="entry.2115618963" value="Low" checked>
-                                            <span class="btn-label low">🟢 Low</span>
-                                        </label>
-                                        <label class="urgency-btn">
-                                            <input type="radio" name="entry.2115618963" value="Medium">
-                                            <span class="btn-label med">🟡 Medium</span>
-                                        </label>
-                                        <label class="urgency-btn">
-                                            <input type="radio" name="entry.2115618963" value="High">
-                                            <span class="btn-label high">🔴 High</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <button type="submit" class="submit-btn" id="submitBtn">
-                                    <span>📨 Submit Concern</span>
-                                </button>
-                            </form>
-
-                            <!-- Invisible iframe -->
-                            <iframe name="hidden_iframe" id="hidden_iframe" style="position:absolute;width:0;height:0;border:0;"></iframe>
-                        </div>
                         <!-- Success Message Card -->
                         <div class="success-message" id="successMessage">
                             <div class="success-icon">✅</div>
@@ -263,10 +263,11 @@
                         </div>
                     </div>
 
-                </div> 
-            </div> 
+                </div>
+            </div>
         </section> 
     </main>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
@@ -275,7 +276,7 @@
         </div>
     </footer>
 
-<!-- POPUP TOAST -->
+    <!-- POPUP TOAST -->
     <div class="toast" id="toast"></div>
 
     <script src="scripts.js"></script>
