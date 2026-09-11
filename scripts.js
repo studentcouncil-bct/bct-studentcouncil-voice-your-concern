@@ -1,46 +1,55 @@
 // ==========================================================================
 // 1. SUBMIT HANDLER (Locks button, hides form, clears inputs)
 // ==========================================================================
-function handleFormSubmit() {
+function handleFormSubmit(event) {
+    const nameInput = document.getElementById('concernName');
+    const gradeSectionInput = document.getElementById('concernGradeSection');
     const btn = document.getElementById('submitBtn');
     const form = document.getElementById('concernForm');
     const successCard = document.getElementById('successMessage');
     const charCount = document.getElementById('charCount');
 
-    // Step A: Disable button immediately to prevent double-clicks
-    if (btn) {
-        btn.disabled = true;
-        btn.innerHTML = '<span>⏳ Sending...</span>';
+    const name = nameInput ? nameInput.value.trim() : '';
+    const gradeSection = gradeSectionInput ? gradeSectionInput.value.trim() : '';
+
+    // Popup warning if Name or Grade & Section is missing
+    if (!name || !gradeSection) {
+        showToast('⚠️ Please enter your Full Name and Grade & Section.');
+        if (event) event.preventDefault(); // Stop form submission
+        return false;
     }
 
-    // Step B: Small 50ms delay so browser packages the data, then instant UI change
+    // Lock button & show loading text
+    if (btn) {
+        btn.disabled = true;
+        btn.innerHTML = '<span>⏳ Submitting...</span>';
+    }
+
+    // Delay for 2 seconds before clearing form & showing success card
     setTimeout(() => {
-        // Hide the form and clear all inputs
         if (form) {
             form.reset();
             form.style.display = 'none';
         }
 
-        // Reset character count
         if (charCount) {
             charCount.textContent = '0';
         }
 
-        // Show the success card & toast notification
         if (successCard) {
             successCard.style.display = 'block';
             successCard.classList.add('show');
         }
-        showToast('✅ Concern submitted anonymously to Google Sheets!');
 
-        // Re-enable button for future use
+        showToast('✅ Concern successfully submitted!');
+
         if (btn) {
             btn.disabled = false;
-            btn.innerHTML = '<span>📨 Submit Concern Anonymously</span>';
+            btn.innerHTML = '<span>📨 Submit Concern</span>';
         }
-    }, 1500);
+    }, 2000);
 
-    return true; // Allows HTML form to send data into hidden iframe
+    return true; // Send to Google Sheet
 }
 
 // ==========================================================================
