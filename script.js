@@ -6,8 +6,8 @@ function handleFormSubmit(event) {
     const form = document.getElementById('concernForm');
     const successCard = document.getElementById('successMessage');
     const charCount = document.getElementById('charCount');
-    const name = nameInput ? nameInput.value.trim() : '';
-    const gradeSection = gradeSectionInput ? gradeSectionInput.value.trim() : '';
+    const name = document.getElementById('concernName').value.trim();
+    const gradeSection = document.getElementById('concernGradeSection').value.trim();
     const nameInput = document.getElementById('concernName');
     const gradeSectionInput = document.getElementById('concernGradeSection');
     const emailInput = document.getElementById('concernEmail');
@@ -23,7 +23,6 @@ function handleFormSubmit(event) {
     if (!gradeSection) {
         showToast('⚠️ Please enter your Grade & Section.');
         document.getElementById('concernGradeSection').focus();
-        if (event) event.preventDefault(); // Stop form submission
         return false;
     }
 
