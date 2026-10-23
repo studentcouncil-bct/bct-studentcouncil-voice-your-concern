@@ -2,27 +2,27 @@
 // 1. SUBMIT HANDLER (Locks button, hides form, clears inputs)
 // ==========================================================================
 function handleFormSubmit(event) {
-    const nameInput = document.getElementById('concernName');
-    const gradeSectionInput = document.getElementById('concernGradeSection');
     const btn = document.getElementById('submitBtn');
     const form = document.getElementById('concernForm');
     const successCard = document.getElementById('successMessage');
     const charCount = document.getElementById('charCount');
-
     const name = nameInput ? nameInput.value.trim() : '';
     const gradeSection = gradeSectionInput ? gradeSectionInput.value.trim() : '';
+    const nameInput = document.getElementById('concernName');
+    const gradeSectionInput = document.getElementById('concernGradeSection');
     const emailInput = document.getElementById('concernEmail');
     const email = emailInput ? emailInput.value.trim() : '';
 
-if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     alert('Please enter a valid email address, or leave it blank.');
     emailInput.focus();
     return false;
 }
 
-    // Popup warning if Name or Grade & Section is missing
-    if (!name || !gradeSection) {
-        showToast('⚠️ Please enter your Full Name and Grade & Section.');
+    // Popup warning if Grade & Section is missing
+    if (!gradeSection) {
+        showToast('⚠️ Please enter your Grade & Section.');
+        document.getElementById('concernGradeSection').focus();
         if (event) event.preventDefault(); // Stop form submission
         return false;
     }
